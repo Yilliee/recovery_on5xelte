@@ -15,7 +15,7 @@
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DT)),true)
-ifneq ($(strip $(BOARD_KERNEL_PREBUILT_DT)),true)
+ifeq ($(strip $(BOARD_KERNEL_PREBUILT_DT)),)
 ifeq ($(strip $(BUILD_TINY_ANDROID)),true)
 include device/qcom/common/dtbtool/Android.mk
 endif
